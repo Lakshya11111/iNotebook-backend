@@ -5,7 +5,8 @@ const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
-const JWTSECRET = "lakshya";
+const dotenv = require('dotenv').config()
+const JWTSECRET = process.env.JWTSECRET;
 
 
 //ROUTE 1 - Creaing a User using: POST "/api/auth/usercreate" . no login required
