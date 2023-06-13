@@ -2,7 +2,8 @@ import noteContext from "./noteContext.js";
 import { useState } from "react";
 
 const NoteState = (props) => {
-    const host = "http://localhost:5000"
+    // const host = "http://localhost:5000"
+    const host = "https://inotebook-backend-yvqv.onrender.com"
     const notesInitial = [];
     const [notes, setNotes] = useState(notesInitial)
     let auth = localStorage.getItem('token');
